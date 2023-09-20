@@ -1,12 +1,11 @@
 number_of_orders = int(input())
-total_price = 0
-for current_order in range(number_of_orders):
+total_sum = 0
+for order in range(number_of_orders):
     price_per_capsule = float(input())
     days = int(input())
-    needed_capsule_per_day = int(input())
-    month_price = price_per_capsule * days * needed_capsule_per_day
-    total_price += month_price
-    if total_price != 0:
-        print(f"The price for the coffee is: ${month_price:.2f}")
-
-print(f"Total: ${total_price:.2f}")
+    capsules_per_day = int(input())
+    coffee_price = price_per_capsule * capsules_per_day * days
+    if 0.01 <= price_per_capsule <= 100 and 1 <= days <= 31 and 1 <= capsules_per_day <= 2000:
+        total_sum += coffee_price
+        print(f"The price for the coffee is: ${coffee_price:.2f}")
+print(f"Total: ${total_sum:.2f}")
