@@ -1,12 +1,23 @@
-def sum_numbers(first, second):
+def smallest(some_numbers: list):
+    return min(some_numbers)
+
+
+first_number = int(input())
+second_number = int(input())
+third_number = int(input())
+smallest_element = smallest([first_number, second_number, third_number])
+print(smallest_element)def sum_numbers(first, second):
     return first + second
 
 
 def subtract(result, third):
-    pass
+    return result - third
+
 
 def add_and_subtract(first, second, third):
-    sum_of_first_and_second = sum_numbers(first, second)
+    returned_result = sum_numbers(first, second)
+    final_result = subtract(returned_result, third)
+    return final_result
 
 
 first_number = int(input())
