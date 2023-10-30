@@ -1,6 +1,3 @@
-import str as str
-
-
 class Storage:
     storage = []
 
