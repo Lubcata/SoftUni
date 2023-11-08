@@ -8,4 +8,3 @@ for student in range(count_of_students):
         students[student_name] = 0
     students[student_name] += student_grade
 
-print(students)
