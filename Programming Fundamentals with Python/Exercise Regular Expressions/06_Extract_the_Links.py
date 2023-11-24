@@ -9,3 +9,4 @@ while line:
         valid_url = match.group(1)
         print(valid_url)
     line = input()
+
