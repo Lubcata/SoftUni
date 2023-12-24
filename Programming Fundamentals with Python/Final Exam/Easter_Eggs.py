@@ -1,11 +1,10 @@
 import re
 
-eggs = input()
-pattern = r"[@#]+([a-z]+)[@#]+[\!\@\$\%\^\&\*\/]+(\d+)[\/]+"
-match = re.findall(pattern, eggs)
+collection_of_eggs = input()
+pattern = r"([@#]+)([a-z]{3,})([@#]+)([^\w\d]+)?([\/]+)([0-9]+)([\/]+)"
+matches = re.findall(pattern, collection_of_eggs)
 
-if eggs:
-    for egg in match:
-        amount = egg[1]
-        color = egg[0]
-        print(f"You found {amount} {color} eggs!")
+for current_tuple in matches:
+    if int(current_tuple[5]) == 0:
+        continue
+    print(f"You found {current_tuple[5]} {current_tuple[1]} eggs!")
