@@ -30,9 +30,3 @@ for x in send_emails:
 
 for email in emails:
     print(email.get_info())
-
-
-
-
-
-
